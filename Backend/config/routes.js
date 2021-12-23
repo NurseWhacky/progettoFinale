@@ -1,4 +1,4 @@
-const DataEngine = require('../routes/dataEntry');
+const DataEngine = require('../engine/entry');
 const ErrorsEngine  = require('../engine/errors');
 
 module.exports = (app) => {
