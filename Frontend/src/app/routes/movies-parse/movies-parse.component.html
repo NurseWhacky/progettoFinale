@@ -1,0 +1,22 @@
+<div class="container box-pages p-5" *ngIf="moviesDataLoader && (authService.isLoggedIn$ | async)">
+
+
+
+  <table class="welcometable">
+    <tr >
+
+        <td>
+          <div class="film" style="background-image: url({{film1Path}})"></div>
+        </td>
+
+
+        <td >
+          <div class="film" style="background-image: url({{film2Path}})"></div>
+        </td>
+
+    </tr>
+  </table>
+
+</div>
+
+<app-mustbelogged></app-mustbelogged>

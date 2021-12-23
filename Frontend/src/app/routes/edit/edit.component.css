@@ -1,0 +1,7 @@
+.container{
+  padding-bottom: 50px;
+  padding-top:10px;
+}
+.col-form-label,.col-sm-10{
+  position: static;
+}

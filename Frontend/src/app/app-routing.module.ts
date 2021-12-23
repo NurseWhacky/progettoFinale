@@ -1,25 +1,29 @@
+import { MoviesParseComponent } from './routes/movies-parse/movies-parse.component';
+import { MoviesapiComponent } from './routes/moviesapi/moviesapi.component';
+import { GenrepipePipe } from './pipes/genrepipe/genrepipe.pipe';
+import { LoginPageComponent } from './routes/login-page/login-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './routes/dashboard/dashboard.component'
 import { AddComponent } from './routes/add/add.component';
 import { DetailsComponent } from './routes/details/details.component';
 import { EditComponent } from './routes/edit/edit.component';
-import { WelcomeComponent } from './routes/welcome/welcome.component';
-import { FilterByGenreComponent } from './routes/filter-by-genre/filter-by-genre.component';
-import { LoginComponent } from './routes/login/login.component';
-import { TheMovieApiComponent } from './routes/the-movie-api/the-movie-api.component';
+import { WelcomepageComponent } from './routes/welcomepage/welcomepage.component';
+import { FilterbygenreComponent } from './routes/filterbygenre/filterbygenre.component';
+
 
 
 const routes: Routes = [
-  { path: "", redirectTo : '/landingPage', pathMatch: 'full' },
+  { path: "", redirectTo : '/welcome', pathMatch: 'full' },
+  { path: "welcome", component : WelcomepageComponent },
   { path: "dashboard", component : DashboardComponent },
   { path: "add", component : AddComponent },
   { path: "details/:id", component : DetailsComponent },
   { path: "edit/:id", component: EditComponent },
-  { path: "landingPage", component: WelcomeComponent},
-  { path: "filterbygenre", component: FilterByGenreComponent},
-  { path: "login", component: LoginComponent},
-  { path: "themovieapi", component: TheMovieApiComponent}
+  { path: "login", component: LoginPageComponent },
+  { path: "filterByGenre", component: FilterbygenreComponent },
+  { path: "moviesapi", component: MoviesapiComponent },
+  { path: "movieparse", component: MoviesParseComponent },
 ];
 
 @NgModule({

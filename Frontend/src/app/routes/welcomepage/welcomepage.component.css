@@ -1,0 +1,36 @@
+.login {
+  width:100%;
+}
+.hd {
+  width:100%;
+}
+@media (max-width: 770px){
+  .hd {
+    display: none;
+  }
+}
+.box-pages{
+  width: 100%;
+  background-image: url('https://i.ibb.co/g4jHzMw/2475175.jpg');
+  background-size: 200%;
+  /*background-color:darkgray;*/
+}
+
+@media (max-width: 1200px){
+  .welcome {
+    padding-right: 207%
+  }
+}
+@media (max-width: 990px){
+  .welcome {
+    margin-left: 20%
+  }
+}
+@media (max-width: 770px){
+  .welcome {
+    margin-left: 0%
+  }
+}
+.welcometable{
+  margin-left: 6%;
+}

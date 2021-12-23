@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
@@ -11,25 +12,25 @@ import { MovieData } from './../../models/data.model'
 })
 export class AddComponent implements OnInit {
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(public authService: AuthService,private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
-    
+
   }
 
   dataEntry : MovieData;
 
   genres = ['Horror','Adventure','Comedy','Fantasy','Crime','Romance']
-  ratedOptions = ['yes', 'no']
+  ratedOptions = ['Yes', 'No']
 
-  
+
 
   onSubmit(form : NgForm){
     this.dataEntry = form.form.value;
     console.log(form)
     console.log(this.dataEntry);
 
-    if(form.form.value.rated==='yes'){
+    if(form.form.value.rated==='Yes'){
       this.dataEntry.rated=true;
     }else{
       this.dataEntry.rated=false;

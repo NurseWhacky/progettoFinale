@@ -23,14 +23,9 @@ export class DashboardComponent implements OnInit {
     this.dataService.getData().subscribe( (response : any) => {
       this.movies = response;
       this.moviesDataLoader=true;
-
     })
   }
-
   goToDetails(id){
     this.router.navigateByUrl('/details/' + id);
   }
-
-  
-
 }

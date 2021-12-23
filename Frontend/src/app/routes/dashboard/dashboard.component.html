@@ -1,8 +1,4 @@
-<div class="container p-5" *ngIf="moviesDataLoader">
-  <h1 class="text-center mb-5">
-    The Net Fish
-  </h1>
-
+<div class="container box-pages p-5" *ngIf="moviesDataLoader">
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -22,4 +18,5 @@
     </tbody>
   </table>
 </div>
-<app-loading-screen *ngIf="!moviesDataLoader" ></app-loading-screen>
+<app-loading-screen *ngIf="!moviesDataLoader"></app-loading-screen>
+

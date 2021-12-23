@@ -16,7 +16,7 @@ export class EditComponent implements OnInit {
   dataEntry: MovieData;
 
   genres = ['Horror','Adventure','Comedy','Fantasy','Crime','Romance'];
-  ratedOptions = ['yes', 'no'];
+  ratedOptions = ['Yes', 'No'];
   ratedOptionSelected: string;
 
   ngOnInit(): void {
@@ -27,16 +27,16 @@ export class EditComponent implements OnInit {
   fetchEntry(id){
     this.dataService.getEntry(id).subscribe( (res: any ) => {
       this.dataEntry = res;
-      
+
       console.log(this.dataEntry)
       if(this.dataEntry.rated){
-        this.ratedOptionSelected="yes";
+        this.ratedOptionSelected="Yes";
       }
-      else this.ratedOptionSelected="no"
+      else this.ratedOptionSelected="No"
     })
-    
+
   }
- 
+
   onSubmit(){
     console.log(this.dataEntry);
     if(this.ratedOptionSelected =='yes'){

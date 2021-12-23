@@ -1,3 +1,4 @@
+import { MustbeloggedComponent } from './components/mustbelogged/mustbelogged.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,14 +11,18 @@ import { AddComponent } from './routes/add/add.component';
 import { DetailsComponent } from './routes/details/details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './routes/edit/edit.component';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginPageComponent } from './routes/login-page/login-page.component';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
-import { WelcomeComponent } from './routes/welcome/welcome.component';
-import { FilterByGenreComponent } from './routes/filter-by-genre/filter-by-genre.component';
-import { FilterGenrePipe } from './pipes/filterGenre.pipe';
-import { LoginComponent } from './routes/login/login.component';
-import { TheMovieApiComponent } from './routes/the-movie-api/the-movie-api.component';
+import { WelcomepageComponent } from './routes/welcomepage/welcomepage.component';
+
+import { GenrepipePipe } from './pipes/genrepipe/genrepipe.pipe';
+import { FilterbygenreComponent } from './routes/filterbygenre/filterbygenre.component';
+import { MoviesapiComponent } from './routes/moviesapi/moviesapi.component';
+import { MoviesParseComponent } from './routes/movies-parse/movies-parse.component';
+
 
 @NgModule({
   declarations: [
@@ -26,14 +31,17 @@ import { TheMovieApiComponent } from './routes/the-movie-api/the-movie-api.compo
     AddComponent,
     DetailsComponent,
     EditComponent,
-    HeaderComponent,
     FooterComponent,
-    LoadingScreenComponent,
-    WelcomeComponent,
-    FilterByGenreComponent,
-    FilterGenrePipe,
+    HeaderComponent,
     LoginComponent,
-    TheMovieApiComponent
+    LoginPageComponent,
+    LoadingScreenComponent,
+    WelcomepageComponent,
+    GenrepipePipe,
+    FilterbygenreComponent,
+    MoviesapiComponent,
+    MoviesParseComponent,
+    MustbeloggedComponent
   ],
   imports: [
     BrowserModule,

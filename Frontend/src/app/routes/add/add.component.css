@@ -1,0 +1,9 @@
+.col-sm-2 {
+  position: static;
+}
+.col-sm-10{
+  position: static;
+}
+.btn:disabled{
+  position: static;
+}
