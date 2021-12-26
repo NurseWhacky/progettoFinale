@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "davide",
+    "password": "",
     "database": "thenetfish",
     "host": "localhost",
     "dialect": "mysql"

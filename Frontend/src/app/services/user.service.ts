@@ -1,4 +1,4 @@
-import { UserData } from './../models/users.model';
+import { UserData, UserIsLoggedData } from './../models/users.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -14,6 +14,7 @@ export class UserService {
   getAll () {
     return this.http.get<Array<UserData>>(this.baseURL)
   }
+
 
   getEntry( id ) {
     return this.http.get<UserData>(this.baseURL + "/" + id)
@@ -36,5 +37,6 @@ export class UserService {
       "password": user.password
     });
   };
+
 
 }

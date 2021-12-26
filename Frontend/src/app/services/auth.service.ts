@@ -6,6 +6,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
+  
   public isLoggedIn$: BehaviorSubject<boolean>;
   public userLogged$: string;
 
@@ -59,6 +60,7 @@ export class AuthService {
     localStorage.setItem('loggedUser', '');
     this.isLoggedIn$.next(false);
   }
+
   searchInsideArray(username: string, password: string): boolean {
     for (let i = 0; i < this.users.length; i++) {
       if (username == this.users[i].username && password == this.users[i].password) {

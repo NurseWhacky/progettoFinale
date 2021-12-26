@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MovieApiInterface } from '../models/data.model';
+import { MovieApiInterface } from '../models/apiMovie.model';
+
 
 @Injectable({
   providedIn: 'root'
