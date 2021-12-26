@@ -13,10 +13,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class LoginComponent implements OnInit {
 
-  anima: any;
+
 
   constructor(public authService: AuthService) {  }
 
+
   ngOnInit(): void {
+    
   }
 }

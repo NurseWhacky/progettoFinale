@@ -49,24 +49,30 @@ export class MoviesParseComponent implements OnInit {
 
       this.resultsApi = this.movies.results;
 
+
       //Conta dei film all'interno dell'array
       for(let i in this.resultsApi){
         counter++;
       }
 
       idFilm1 = Math.floor(Math.random() * counter) + 0 ;
+
       for(let i=0;i<counter;i++){
         if(idFilm1 == i){
           this.film1 = this.resultsApi[i];
           this.film1Path = this.filmPath.concat(this.resultsApi[i].backdrop_path)
         }
       }
+
       idFilm2 = Math.floor(Math.random() * counter) + 0 ;
+
       if(idFilm1 == idFilm2 && idFilm1 != counter){
         idFilm2++;
       }else if(idFilm1 == counter){
         idFilm2--;
       }
+      console.log(this.movies);
+
       for(let i=0;i<counter;i++){
         if(idFilm2 == i){
           this.film2 = this.resultsApi[i];
@@ -76,6 +82,7 @@ export class MoviesParseComponent implements OnInit {
     },
     error => console.log(error)
     )
+
 
   }
 

@@ -6,7 +6,9 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  
+
+  baseURL = 'http://localhost:3000/user';
+
   public isLoggedIn$: BehaviorSubject<boolean>;
   public userLogged$: string;
 
@@ -41,12 +43,20 @@ export class AuthService {
 
   login() {
     if (this.usernameInput != null && this.passwordInput != null) {
+
       if (this.searchInsideArray(this.usernameInput, this.passwordInput)) {
 
         localStorage.setItem('loggedIn', 'true');
         localStorage.setItem('loggedUser', this.usernameInput);
         this.isLoggedIn$.next(true);
-        window.location.reload();
+        this.router.navigate(['/dashboard']);
+
+        // chiama il database utenti
+        // trova l'utente con quella username e password
+        // prendi l'user id e salvalo
+        // cambia il cambo database "è loggato"
+
+        //window.location.reload();
 
 
       }

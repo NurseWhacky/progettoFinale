@@ -30,5 +30,9 @@ export class MoviesapiComponent implements OnInit {
     )
   }
 
+  goToDetails(){
+    this.router.navigateByUrl('/dashboard');
+  }
+
 
 }
