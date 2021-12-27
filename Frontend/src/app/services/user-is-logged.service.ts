@@ -42,5 +42,13 @@ export class UserIsLoggedService {
     });
   };
 
+  addEntryUserIsLogged = (user: UserIsLoggedData) => {
+    return this.http.post<UserIsLoggedData>(this.baseURLUserIsLoggedData, {
+      "userId": user.userId,
+      "username": user.username,
+      "password": user.password,
+      "userislogged": user.userislogged
+    });
+  };
 
 }

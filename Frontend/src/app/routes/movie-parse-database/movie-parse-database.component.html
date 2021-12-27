@@ -1,0 +1,27 @@
+<div class="container box-pages p-5" *ngIf="moviesDataLoader ">
+
+
+
+  <table class="welcometable">
+    <tr >
+
+        <td>
+          <div class="film" ><img src={{film1Path}}></div>
+          <br>
+          <button class="btn btn-primary mr-5" [routerLink]="['/dashboard']">Back</button>
+        </td>
+
+
+        <td >
+          <div class="film"><img src={{film2Path}}></div>
+          <br>
+          <button class="btn btn-primary mr-5" [routerLink]="['/dashboard']">Back</button>
+        </td>
+
+
+    </tr>
+  </table>
+
+</div>
+
+

@@ -16,5 +16,24 @@ export interface ResultInterface{
     popularity: number,
     release_date: string,
     title: string,
-    video: boolean
+    video: boolean,
+
 }
+
+export interface MovieDatabaseInterface{
+  id: number,
+  
+  backdrop_path: string,
+  idmovie: number,
+  media_type: string,
+  original_language: string,
+  overview: string,
+  popularity: number,
+  release_date: string,
+  title: string,
+  video: boolean,
+  image_path: string,
+
+}
+
+

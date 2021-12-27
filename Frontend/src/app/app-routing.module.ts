@@ -10,6 +10,7 @@ import { DetailsComponent } from './routes/details/details.component';
 import { EditComponent } from './routes/edit/edit.component';
 import { WelcomepageComponent } from './routes/welcomepage/welcomepage.component';
 import { FilterbygenreComponent } from './routes/filterbygenre/filterbygenre.component';
+import { MovieParseDatabaseComponent } from './routes/movie-parse-database/movie-parse-database.component';
 
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: "filterByGenre", component: FilterbygenreComponent },
   { path: "moviesapi", component: MoviesapiComponent },
   { path: "movieparse", component: MoviesParseComponent },
+  { path: "movieDatabaseparse", component: MovieParseDatabaseComponent },
 ];
 
 @NgModule({
