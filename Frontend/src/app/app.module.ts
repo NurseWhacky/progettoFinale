@@ -23,6 +23,7 @@ import { FilterbygenreComponent } from './routes/filterbygenre/filterbygenre.com
 import { MoviesapiComponent } from './routes/moviesapi/moviesapi.component';
 import { MoviesParseComponent } from './routes/movies-parse/movies-parse.component';
 import { MovieParseDatabaseComponent } from './routes/movie-parse-database/movie-parse-database.component';
+import { DetailsMovieApiComponent } from './routes/details-movie-api/details-movie-api.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MovieParseDatabaseComponent } from './routes/movie-parse-database/movie
     MoviesapiComponent,
     MoviesParseComponent,
     MustbeloggedComponent,
-    MovieParseDatabaseComponent
+    MovieParseDatabaseComponent,
+    DetailsMovieApiComponent
   ],
   imports: [
     BrowserModule,

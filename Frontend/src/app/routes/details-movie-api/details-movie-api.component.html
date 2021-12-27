@@ -1,0 +1,42 @@
+<div *ngIf="moviesdetails != null " class="container box-pages p-5">
+
+  <div class="row ">
+      <button class="btn btn-primary mr-5"[routerLink]="['/moviesapi']">Movie api list</button>
+      <h3>Details</h3>
+  </div>
+
+  <table>
+    <tr>
+      <td>
+        <div class="mt-5 p-4">
+          <ul class="list-group">
+              <li class="list-group-item">Id : {{ moviesdetails.id }}</li>
+              <li class="list-group-item">Title : {{moviesdetails.title}}</li>
+              <li class="list-group-item">Lingua originale: {{moviesdetails.original_language}}</li>
+              <li class="list-group-item">Data di uscita : {{moviesdetails.release_date}}</li>
+              <li class="list-group-item">Voto medio : {{moviesdetails.popularity}}</li>
+          </ul>
+      </div>
+    </td>
+
+    <td>
+      <br>
+      <br>
+    </td>
+
+    <td>
+        <br>
+        <div class="film"><img src={{filmPathHTML}}></div>
+    </td>
+
+    </tr>
+  </table>
+
+
+  <div class="row">
+      <button class="btn btn-danger ml-5" (click)='delete()'>Delete</button>
+      <!--<button class="btn btn-primary ml-3" [routerLink]="['/edit/'+ dataEntry.id]">Edit</button>-->
+  </div>
+
+
+</div>

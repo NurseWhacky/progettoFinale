@@ -30,8 +30,8 @@ export class MoviesapiComponent implements OnInit {
     )
   }
 
-  goToDetails(){
-    this.router.navigateByUrl('/dashboard');
+  goToMovieDatabaseDetails(id){
+    this.router.navigateByUrl('/movieApiDetails/'+ id);
   }
 
 
